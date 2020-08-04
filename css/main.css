@@ -146,7 +146,7 @@ header {
   color: #eece1a; }
 
 main {
-  padding: 4rem;
+  padding: 2rem;
   min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
@@ -184,9 +184,9 @@ main {
     padding: 0.5rem;
     border-bottom: #eece1a 5px solid; }
 
-.projects {
+/* .projects {
   display: grid;
-  grid-gap: 0.6rem;
+  grid-gap: 1.0rem;
   grid-template-columns: repeat(3, 1fr); }
   .projects img {
     width: 100%;
@@ -194,7 +194,7 @@ main {
     .projects img:hover {
       opacity: 0.5;
       border-color: #eece1a;
-      transition: all 0.5s ease-out; }
+      transition: all 0.5s ease-out; } */
 
 .boxes {
   display: flex;
@@ -232,16 +232,17 @@ main {
   background: #c4c4c4;
   color: #333; }
 
-#main-footer {
+ #main-footer {
   text-align: center;
   padding: 1rem;
   background: #2b2b2b;
   color: #fff;
   height: 60px; }
 
+  /*
 @media screen and (min-width: 1171px) {
   .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
@@ -277,9 +278,9 @@ main {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); } } */
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
   main {
     padding: 2rem; }
     main #home h1 {
@@ -288,4 +289,51 @@ main {
       margin-top: 1rem;
       font-size: 5rem; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; } } */
+
+
+    *  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col_img {
+  display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col_img:first-child { margin-left: 0; }
+
+.col:first-child { margin-left: 0; }
+
+.co_image {
+  height: 350px;
+  width: 495px;
+}
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF THREE  */
+.span_3_of_3 { width: 100%; }
+.span_2_of_3 { width: 66.13%; }
+.span_1_of_3 { width: 32.26%; }
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+}
+
+
